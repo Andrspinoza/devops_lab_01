@@ -1,0 +1,31 @@
+name: First Workflow
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs: 
+  build:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Print Saludo
+        run: echo "Hola a Todos, este es mi primer workflow hecho a mano :)"
+      - name: Print Repository Info
+        run: echo ${{ github.repository_owner }}
+      - name: Print Repository Owner ID
+        run: echo ${{ github.repository_owner_id }}
+      - name: Print Repository ID
+        run: echo ${{ github.repository_id }}
+
+
+
+
+
+
+
+
+
